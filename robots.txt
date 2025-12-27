@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dugriel.github.io/sitemap.xml
