@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta name="google-site-verification" content="-R7wBXmDUIaSrNs7CLW_9RbEgwZHtkMxzyzP0Uz3JqQ" /><link rel="icon" type="image/x-icon" href="/favicon.ico">
+<head>
+<meta name="google-site-verification" content="-R7wBXmDUIaSrNs7CLW_9RbEgwZHtkMxzyzP0Uz3JqQ" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dugriel - Temas de existencia.</title>
@@ -78,7 +80,7 @@
         }
         .descripcion p { margin-bottom: 12px; }
 
-        /* LISTA de Textos */
+        /* LISTA de Textos - MODIFICADO PARA ENLACES Y DESCRIPCIONES */
         .indice-titulo {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.5rem;
@@ -93,14 +95,13 @@
             margin-bottom: 50px;
         }
         .lista-textos li {
-            padding: 16px 20px;
-            margin-bottom: 12px;
+            padding: 20px 20px;
+            margin-bottom: 16px;
             border-left: 2px solid transparent;
             transition: all 0.3s ease;
             border-radius: 4px;
-            font-size: 1.05rem;
-            color: #2c3e50;
             position: relative;
+            background-color: rgba(255, 255, 255, 0.8);
         }
         .lista-textos li:hover {
             background-color: #f8f5f0;
@@ -111,11 +112,36 @@
             content: attr(data-index);
             position: absolute;
             left: -10px;
-            top: 16px;
+            top: 20px;
             font-size: 0.85rem;
             color: #c0a88b;
             font-weight: 500;
             opacity: 0.7;
+        }
+        
+        /* Estilos para los enlaces de los textos */
+        .texto-enlace {
+            font-size: 1.08rem;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            transition: color 0.2s ease;
+        }
+        .texto-enlace:hover {
+            color: #8b7355;
+            text-decoration: underline;
+        }
+        
+        /* Estilos para las descripciones */
+        .texto-descripcion {
+            font-size: 0.95rem;
+            color: #5d6d7e;
+            line-height: 1.6;
+            font-weight: 300;
+            margin-top: 4px;
         }
 
         /* NOTA de Expansión */
@@ -176,8 +202,14 @@
             h1 { font-size: 2.5rem; }
             .descripcion { font-size: 1.1rem; }
             .lista-textos li {
-                padding: 14px 16px;
+                padding: 16px 16px;
                 font-size: 1rem;
+            }
+            .texto-enlace {
+                font-size: 1rem;
+            }
+            .texto-descripcion {
+                font-size: 0.9rem;
             }
             .enlace-perfil a {
                 padding: 10px 24px;
@@ -187,7 +219,7 @@
     </style>
 </head>
 <body>
-    <!-- El cuerpo del documento permanece EXACTAMENTE igual -->
+    <!-- El cuerpo del documento con la lista ACTUALIZADA -->
     <div class="contenedor">
         <header class="cabecera">
             <h1>Dugriel</h1>
@@ -201,23 +233,74 @@
         <main>
             <h2 class="indice-titulo">Índice de Textos</h2>
             <ul class="lista-textos">
-                <li data-index="01">Pensamiento Adaptativo Aproximado (PAA)</li>
-                <li data-index="02">Narrador y Nada Completo</li>
-                <li data-index="03">La Belleza Como Patrón Cumplido</li>
-                <li data-index="04">La Hipocresía Como Función</li>
-                <li data-index="05">El Amor Como Aprendizaje, Proceso y Cumplimiento</li>
-                <li data-index="06">Modelo procesual del vínculo humano</li>
-                <li data-index="07">El Tiempo Como Proceso</li>
-                <li data-index="08">De La Física A La Libertad</li>
-                <li data-index="09">La Desprocesación De La Luz</li>
-                <li data-index="10">Teoría, Transición del Agujero Negro</li>
-                <li data-index="11">Teoría De La Cosmología Cuántica Del Campo Primordial</li>
-                <li data-index="12">El Espacio Entre Los Polos</li>
-                <li data-index="13">La Universalidad Del Concepto De Campo</li>
-                <li data-index="14">Reflexión sobre la Opinión y el Pensamiento Social Contemporáneo</li>
-                <li data-index="15">El Siguiente Paso De La Humanidad</li>
-                <li data-index="16">La pérdida del Nombre</li>
-                <li data-index="17">Slow Fall (. SF) — Manifiesto</li>
+                <li data-index="01">
+                    <a href="https://archive.org/details/cover_20250927_1034/Pensamiento%20Adaptativo%20Aproximado%20-%20Guía/" class="texto-enlace" target="_blank">Pensamiento Adaptativo Aproximado (PAA)</a>
+                    <p class="texto-descripcion">Guía sobre el pensamiento adaptativo y la aproximación al conocimiento.</p>
+                </li>
+                <li data-index="02">
+                    <a href="https://archive.org/details/cover_20251001_0437" class="texto-enlace" target="_blank">Modelo procesual del vínculo humano</a>
+                    <p class="texto-descripcion">Visión por fuera. Un modelo procesual que describe las etapas universales de profundización del vínculo humano, utilizando términos cotidianos (“salir”, “pareja”, “noviazgo”, “casamiento”) como meras etiquetas para fases temporales y estructurales, no como prescripciones culturales.</p>
+                </li>
+                <li data-index="03">
+                    <a href="https://archive.org/details/cover_20250927_1038/Narrador%20Y%20Nada%20Completo/" class="texto-enlace" target="_blank">Narrador y Nada Completo</a>
+                    <p class="texto-descripcion">Reflexión, pensar.</p>
+                </li>
+                <li data-index="04">
+                    <a href="https://archive.org/details/cover_20250927_1045/Teoria_Transicion_Agujero_Negro/" class="texto-enlace" target="_blank">Teoría, Transición del Agujero Negro</a>
+                    <p class="texto-descripcion">Infinito.</p>
+                </li>
+                <li data-index="05">
+                    <a href="https://archive.org/details/la-desprocesacion-de-la-luz-pensamiento-sobre-la-velocidad-el-vacio-y-el-limite-/La%20desprocesación%20de%20la%20luz_%20pensamiento%20sobre%20la%20velocidad%2C%20el%20vacío%20y%20el%20límite%20del%20fotón%20—%20Por%20Dugriel/" class="texto-enlace" target="_blank">La Desprocesación De La Luz Pensamiento Sobre La Velocidad, El Vacío Y El Límite Del Fotón</a>
+                    <p class="texto-descripcion">Ensayo filosófico y físico sobre la naturaleza del fotón como proceso. Propone el concepto de “desprocesación” para describir la pérdida de coherencia del campo electromagnético bajo condiciones extremas, como los agujeros negros.</p>
+                </li>
+                <li data-index="06">
+                    <a href="https://archive.org/details/el-siguiente-paso-de-la-humanidad-el-control-del-cerebro-y-la-evolucion-hacia-la-materia/El%20siguiente%20paso%20de%20la%20humanidad_%20el%20control%20del%20cerebro%20y%20la%20evolución%20hacia%20la%20materia/" class="texto-enlace" target="_blank">El Siguiente Paso De La Humanidad El Control Del Cerebro Y La Evolución Hacia La Materia</a>
+                    <p class="texto-descripcion">Ensayo filosófico y científico sobre la evolución humana desde la perspectiva del control del cerebro y la expansión de la conciencia hacia la materia. Explora la transición de la evolución biológica a la material y neurológica, el vínculo entre mente y energía, y el posible futuro donde el pensamiento actúe directamente sobre la materia.</p>
+                </li>
+                <li data-index="07">
+                    <a href="https://archive.org/details/el-tiempo-como-proceso-una-observacion-sobre-la-existencia" class="texto-enlace" target="_blank">El Tiempo Como Proceso</a>
+                    <p class="texto-descripcion">Reflexión filosófica original sobre la naturaleza del tiempo entendida como proceso. El texto propone que el tiempo no es duración ni flujo, sino la condición relacional que emerge cuando algo puede procesar el cambio.</p>
+                </li>
+                <li data-index="08">
+                    <a href="https://archive.org/details/de-la-fisica-a-la-libertad-una-explicacion-del-pensamiento/De%20la%20Física%20a%20la%20Libertad_%20Una%20Explicación%20del%20Pensamiento/" class="texto-enlace" target="_blank">De La Física A La Libertad</a>
+                    <p class="texto-descripcion">¿Y si la verdadera libertad no es lo que crees? Este ensayo conecta la física de partículas con la condición humana, revelando por qué la "independencia" es más peligrosa y profunda que la "libertad". Descubre la diferencia crucial entre estar libre en un campo social y ser verdaderamente independiente, y cómo esta distinción define tu vida real.</p>
+                </li>
+                <li data-index="09">
+                    <a href="https://archive.org/details/el-amor-como-aprendizaje-proceso-y-cumplimiento/El%20amor%20como%20aprendizaje%2C%20proceso%20y%20cumplimiento/" class="texto-enlace" target="_blank">El Amor Como Aprendizaje, Proceso y Cumplimiento</a>
+                    <p class="texto-descripcion">Este texto desarrolla una teoría del amor basada en el aprendizaje, la práctica y el cumplimiento de un proceso estructurado. Se analiza el amor no como emoción instantánea ni como química biológica, sino como un fenómeno cognitivo, ético y temporal que integra pasado, presente y futuro.</p>
+                </li>
+                <li data-index="10">
+                    <a href="https://archive.org/details/el-espacio-entre-los-polos-campos-gravedad-y-la-estructura-de-la-realidad/El%20Espacio%20entre%20los%20Polos%20Campos%2C%20Gravedad%20y%20la%20Estructura%20de%20la%20Realidad/" class="texto-enlace" target="_blank">El Espacio Entre Los Polos</a>
+                    <p class="texto-descripcion">Una exploración sobre la naturaleza fundamental de los campos y la gravedad, desde la intuición inicial hasta implicaciones cosmológicas. Propone que lo esencial ocurre en el espacio entre las cosas, no en las cosas mismas.</p>
+                </li>
+                <li data-index="11">
+                    <a href="https://archive.org/details/teoria-de-la-cosmologia-cuantica-del-campo-primordial-la-conexion-fractal" class="texto-enlace" target="_blank">Teoría De La Cosmología Cuántica Del Campo Primordial</a>
+                    <p class="texto-descripcion">Explora una cosmología donde la realidad es un eco fractal: un mismo latido genera galaxias y partículas. Aquí, un agujero negro no es un vacío oscuro, sino la semilla de un nuevo big bang, conectado por la no-localidad de un Campo Primordial.</p>
+                </li>
+                <li data-index="12">
+                    <a href="https://archive.org/details/el-espacio-entre-los-polos-campos-gravedad-y-la-estructura-de-la-realidad/El%20Espacio%20entre%20los%20Polos%20Campos%2C%20Gravedad%20y%20la%20Estructura%20de%20la%20Realidad/" class="texto-enlace" target="_blank">El Espacio Entre Los Polos</a>
+                    <p class="texto-descripcion">Una exploración sobre la naturaleza fundamental de los campos y la gravedad, desde la intuición inicial hasta implicaciones cosmológicas. Propone que lo esencial ocurre en el espacio entre las cosas, no en las cosas mismas.</p>
+                </li>
+                <li data-index="13">
+                    <a href="https://archive.org/details/la-universalidad-del-concepto-de-campo" class="texto-enlace" target="_blank">La Universalidad Del Concepto De Campo</a>
+                    <p class="texto-descripcion">Propone el "campo estructurante" como principio universal para entender la realidad. Examina cómo toda existencia —desde lo físico hasta lo cognitivo— emerge en contextos relacionales, contrastando el pensamiento de campos con el enfoque sustancialista.</p>
+                </li>
+                <li data-index="14">
+                    <a href="https://archive.org/details/cover_20251010" class="texto-enlace" target="_blank">Reflexión sobre la Opinión y el Pensamiento Social Contemporáneo</a>
+                    <p class="texto-descripcion">Pensar.</p>
+                </li>
+                <li data-index="15">
+                    <a href="https://archive.org/details/el-siguiente-paso-de-la-humanidad-el-control-del-cerebro-y-la-evolucion-hacia-la-materia/El%20siguiente%20paso%20de%20la%20humanidad_%20el%20control%20del%20cerebro%20y%20la%20evolución%20hacia%20la%20materia/" class="texto-enlace" target="_blank">El Siguiente Paso De La Humanidad</a>
+                    <p class="texto-descripcion">Ensayo filosófico y científico sobre la evolución humana desde la perspectiva del control del cerebro y la expansión de la conciencia hacia la materia.</p>
+                </li>
+                <li data-index="16">
+                    <a href="https://archive.org/details/la-perdida-del-nombre/La%20pérdida%20del%20Nombre/" class="texto-enlace" target="_blank">La pérdida del Nombre</a>
+                    <p class="texto-descripcion">Ensayo que analiza cómo el término “Dios” occidental reemplazó los nombres sagrados originales de diferentes culturas, desde YHWH hasta Teōtl y K'uh, explorando la pérdida de significado cultural y la transformación del lenguaje sagrado en dogma universal.</p>
+                </li>
+                <li data-index="17">
+                    <a href="https://archive.org/details/slow-fall-.-sf-manifiesto" class="texto-enlace" target="_blank">Slow Fall (. SF) — Manifiesto</a>
+                    <p class="texto-descripcion">Manifiesto fundacional del proyecto Slow Fall (.SF), también conocida como “la red de la posibilidad”. Una propuesta ética, filosófica y tecnológica que busca reconfigurar la interacción digital, devolviendo la equidad, el azar justo y la autenticidad como pilares de la conexión humana.</p>
+                </li>
             </ul>
 
             <p class="nota-expansion">Esta lista está en expansión. Es un registro vivo del pensamiento.</p>
@@ -230,4 +313,3 @@
     </div>
 </body>
 </html>
-
