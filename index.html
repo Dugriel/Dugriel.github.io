@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="google-site-verification" content="-R7wBXmDUIaSrNs7CLW_9RbEgwZHtkMxzyzP0Uz3JqQ" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dugriel - Temas de existencia.</title>
-    <!-- ARREGLO 1: Meta descripción mejorada para SEO -->
-    <meta name="description" content="Explora ensayos filosóficos originales de Dugriel sobre el pensamiento, la conciencia, el tiempo y la realidad. Un espacio de metacognición y temas de existencia.">
-    <!-- NOTA: Se ha eliminado el enlace a Google Fonts para garantizar acceso global. -->
+    <title>Dugriel — Ensayos filosóficos sobre pensamiento, conciencia y realidad</title>
+    <meta name="description" content="Ensayos filosóficos originales de Dugriel sobre pensamiento, conciencia, tiempo, realidad y crítica social. Un espacio de metacognición y temas de existencia.">
+    <meta http-equiv="Content-Language" content="es">
+    <meta name="google-site-verification" content="-R7wBXmDUIaSrNs7CLW_9RbEgwZHtkMxzyzP0Uz3JqQ" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
-        /* RESET y Configuración Base */
+        /* RESET y Base */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { font-size: 18px; }
-
         body {
-            /* Se reemplaza 'Inter' por una pila de fuentes del sistema moderna y similar */
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             font-weight: 300;
             line-height: 1.7;
             color: #2c3e50;
             background-color: #faf9f7;
-            background-image: 
+            background-image:
                 radial-gradient(#e0e0e0 1px, transparent 1px),
                 radial-gradient(#e0e0e0 1px, transparent 1px);
             background-size: 40px 40px;
@@ -32,8 +29,6 @@
             flex-direction: column;
             align-items: center;
         }
-
-        /* Contenedor Principal */
         .contenedor {
             max-width: 720px;
             width: 100%;
@@ -48,14 +43,11 @@
         .contenedor::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
+            top: 0; left: 0; right: 0; height: 4px;
             background: linear-gradient(90deg, #8b7355, #c0a88b, #8b7355);
         }
 
-        /* CABECERA */
+        /* Cabecera */
         .cabecera {
             text-align: center;
             margin-bottom: 60px;
@@ -63,7 +55,6 @@
             border-bottom: 1px solid #eae2d7;
         }
         h1 {
-            /* Se reemplaza 'Crimson Pro' por una pila de fuentes serif clásicas */
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 3.2rem;
             font-weight: 600;
@@ -72,17 +63,16 @@
             margin-bottom: 20px;
             line-height: 1.1;
         }
-        /* ARREGLO 2: Contraste mejorado para texto secundario */
         .descripcion {
             font-size: 1.2rem;
-            color: #4a5a6b; /* Cambiado de #5d6d7e */
+            color: #4a5a6b;
             font-style: italic;
             max-width: 580px;
             margin: 0 auto;
         }
         .descripcion p { margin-bottom: 12px; }
 
-        /* LISTA de Textos - MODIFICADO PARA ENLACES Y DESCRIPCIONES */
+        /* Lista de Textos - ESTRUCTURA SEMÁNTICA MEJORADA */
         .indice-titulo {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.5rem;
@@ -97,7 +87,7 @@
             margin-bottom: 50px;
         }
         .lista-textos li {
-            padding: 20px 20px;
+            padding: 20px 20px 20px 28px; /* Más padding izquierdo para el número */
             margin-bottom: 16px;
             border-left: 2px solid transparent;
             transition: all 0.3s ease;
@@ -108,10 +98,10 @@
         .lista-textos li:hover {
             background-color: #f8f5f0;
             border-left-color: #8b7355;
-            padding-left: 28px;
         }
-        .lista-textos li::before {
-            content: attr(data-index);
+        /* --- CORRECIÓN TÉCNICA APLICADA AQUÍ --- */
+        /* Número de índice como elemento HTML explícito, no pseudo-elemento */
+        .indice-numero {
             position: absolute;
             left: -10px;
             top: 20px;
@@ -120,37 +110,35 @@
             font-weight: 500;
             opacity: 0.7;
         }
-        
-        /* Estilos para los enlaces de los textos */
-        .texto-enlace {
+        /* El título de cada ensayo es ahora un H3 */
+        .lista-textos h3 {
+            margin: 0;
             font-size: 1.08rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .texto-enlace {
             color: #2c3e50;
             text-decoration: none;
-            font-weight: 500;
-            display: block;
-            margin-bottom: 8px;
-            line-height: 1.4;
             transition: color 0.2s ease;
+            display: block;
         }
         .texto-enlace:hover {
             color: #8b7355;
             text-decoration: underline;
         }
-        
-        /* ARREGLO 2: Contraste mejorado para descripciones */
         .texto-descripcion {
             font-size: 0.95rem;
-            color: #4a5a6b; /* Cambiado de #5d6d7e */
+            color: #4a5a6b;
             line-height: 1.6;
             font-weight: 300;
-            margin-top: 4px;
+            margin-top: 6px;
         }
 
-        /* NUEVA NOTA DE ACCESO GLOBAL */
-        /* ARREGLO 2: Contraste mejorado para notas */
+        /* Notas */
         .nota-acceso {
             font-size: 0.95rem;
-            color: #5d6b6c; /* Cambiado de #7f8c8d */
+            color: #5d6b6c;
             line-height: 1.6;
             margin: -10px 0 30px 0;
             padding: 15px;
@@ -158,13 +146,10 @@
             border-radius: 8px;
             border: 1px solid #ffeeba;
         }
-
-        /* NOTA de Expansión */
-        /* ARREGLO 2: Contraste mejorado para notas */
         .nota-expansion {
             text-align: center;
             font-size: 0.95rem;
-            color: #5d6b6c; /* Cambiado de #7f8c8d */
+            color: #5d6b6c;
             font-style: italic;
             margin: 30px 0 50px 0;
             padding: 15px;
@@ -173,7 +158,7 @@
             border: 1px dashed #a3d0fd;
         }
 
-        /* ENLACE FINAL */
+        /* Footer */
         .enlace-perfil {
             text-align: center;
             padding-top: 40px;
@@ -207,92 +192,73 @@
             box-shadow: 0 5px 15px rgba(41, 128, 185, 0.15);
         }
 
-        /* RESPONSIVE */
+        /* Responsive */
         @media (max-width: 768px) {
             html { font-size: 16px; }
             body { padding: 20px 15px; }
-            .contenedor {
-                padding: 40px 25px;
-                border-radius: 12px;
-            }
+            .contenedor { padding: 40px 25px; border-radius: 12px; }
             h1 { font-size: 2.5rem; }
-            .descripcion { font-size: 1.1rem; }
-            .lista-textos li {
-                padding: 16px 16px;
-                font-size: 1rem;
-            }
-            .texto-enlace {
-                font-size: 1rem;
-            }
-            .texto-descripcion {
-                font-size: 0.9rem;
-            }
-            .enlace-perfil a {
-                padding: 10px 24px;
-                font-size: 1rem;
-            }
+            .descripcion, .lista-textos h3 { font-size: 1rem; }
+            .lista-textos li { padding: 16px 16px 16px 24px; }
+            .indice-numero { left: -8px; top: 16px; font-size: 0.8rem; }
+            .texto-descripcion { font-size: 0.9rem; }
+            .enlace-perfil a { padding: 10px 24px; font-size: 1rem; }
         }
 
-        /* MODO OSCURO - ARREGLO 1 (Sin cambios, ya estaba perfecto) */
+        /* Modo Oscuro */
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #0f1115;
                 background-image: none;
                 color: #d0d0d0;
             }
-
             .contenedor {
                 background-color: #16181d;
                 border-color: #222;
                 box-shadow: none;
             }
-
             h1 { color: #f0f0f0; }
             .descripcion, .texto-descripcion { color: #b0b0b0; }
-            .texto-enlace { color: #e0e0e0; }
-            .texto-enlace:hover { color: #c0a88b; }
-            
+            .lista-textos h3 .texto-enlace { color: #e0e0e0; }
+            .lista-textos h3 .texto-enlace:hover { color: #c0a88b; }
+            /* Color del número en modo oscuro */
+            .indice-numero { color: #c0a88b; }
             .nota-acceso {
-                background-color: #1a1a1a;
-                border-color: #333;
-                color: #b0b0b0;
+                background-color: #1a1a1a; border-color: #333; color: #b0b0b0;
             }
-            
             .nota-expansion {
-                background-color: #1a1f2e;
-                border-color: #2a3a5a;
-                color: #a0b0c0;
+                background-color: #1a1f2e; border-color: #2a3a5a; color: #a0b0c0;
             }
-            
             .enlace-perfil a {
-                background-color: #1e2a3a;
-                border-color: #2a3a5a;
-                color: #90c0ff;
+                background-color: #1e2a3a; border-color: #2a3a5a; color: #90c0ff;
             }
-            
             .enlace-perfil a:hover {
-                background-color: #2980b9;
-                color: white;
+                background-color: #2980b9; color: white;
             }
-            
-            .lista-textos li {
-                background-color: rgba(30, 30, 35, 0.8);
-            }
-            
-            .lista-textos li:hover {
-                background-color: #222228;
-            }
+            .lista-textos li { background-color: rgba(30, 30, 35, 0.8); }
+            .lista-textos li:hover { background-color: #222228; }
         }
     </style>
-    
-    <!-- DATOS ESTRUCTURADOS JSON-LD PARA SEO (Dugriel como Persona) -->
+    <!-- DATOS ESTRUCTURADOS PARA SEO (PERSONA + SITIO WEB) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Dugriel",
-      "url": "https://dugriel.github.io",
-      "sameAs": ["https://archive.org/details/@dugriel"]
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "#person",
+          "name": "Dugriel",
+          "url": "https://dugriel.github.io",
+          "sameAs": ["https://archive.org/details/@dugriel"]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Dugriel — Ensayos filosóficos",
+          "url": "https://dugriel.github.io",
+          "description": "Índice de ensayos filosóficos originales de Dugriel sobre pensamiento, conciencia, tiempo, realidad y crítica social.",
+          "author": { "@id": "#person" }
+        }
+      ]
     }
     </script>
 </head>
@@ -309,81 +275,101 @@
 
         <main>
             <h2 class="indice-titulo">Índice de Textos</h2>
-            
-            <!-- NUEVA NOTA DE ACCESO GLOBAL INSERTADA AQUÍ -->
             <p class="nota-acceso">Nota para lectores globales: Los textos están alojados en Archive.org. Este sitio puede estar bloqueado en algunos países. Si no puedes acceder a los enlaces, el uso de un servicio VPN o el navegador Tor suele resolver el problema.</p>
-            
-            <!-- ARREGLO 3: Elemento nav para mejor accesibilidad (ya estaba) -->
+
             <nav aria-label="Índice de textos">
                 <ul class="lista-textos">
-                    <li data-index="01">
-                        <!-- ARREGLO 2: Seguridad en enlaces (ya estaba) -->
-                        <a href="https://archive.org/details/cover_20250927_1034/Pensamiento%20Adaptativo%20Aproximado%20-%20Guía/" class="texto-enlace" target="_blank" rel="noopener noreferrer">Pensamiento Adaptativo Aproximado</a>
+                    <!-- NOTA: Cada <li> ahora contiene un <span class="indice-numero" aria-hidden="true"> -->
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">01</span>
+                        <h3><a href="https://archive.org/details/cover_20250927_1034/Pensamiento%20Adaptativo%20Aproximado%20-%20Guía/" class="texto-enlace" target="_blank" rel="noopener noreferrer">Pensamiento Adaptativo Aproximado</a></h3>
                         <p class="texto-descripcion">Guía sobre el pensamiento adaptativo y la aproximación al conocimiento.</p>
                     </li>
-                    <li data-index="02">
-                        <a href="https://archive.org/details/cover_20251001_0437" class="texto-enlace" target="_blank" rel="noopener noreferrer">Modelo procesual del vínculo humano</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">02</span>
+                        <h3><a href="https://archive.org/details/cover_20251001_0437" class="texto-enlace" target="_blank" rel="noopener noreferrer">Modelo procesual del vínculo humano</a></h3>
                         <p class="texto-descripcion">Visión por fuera. Un modelo procesual que describe las etapas universales de profundización del vínculo humano, utilizando términos cotidianos ("salir", "pareja", "noviazgo", "casamiento") como meras etiquetas para fases temporales y estructurales, no como prescripciones culturales.</p>
                     </li>
-                    <li data-index="03">
-                        <a href="https://archive.org/details/cover_20250927_1038/Narrador%20Y%20Nada%20Completo/" class="texto-enlace" target="_blank" rel="noopener noreferrer">Narrador Y Nada Completo</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">03</span>
+                        <h3><a href="https://archive.org/details/cover_20250927_1038/Narrador%20Y%20Nada%20Completo/" class="texto-enlace" target="_blank" rel="noopener noreferrer">Narrador Y Nada Completo</a></h3>
                         <p class="texto-descripcion">Reflexión, pensar.</p>
                     </li>
-                    <li data-index="04">
-                        <a href="https://archive.org/details/cover_20250927_1045/Teoria_Transicion_Agujero_Negro/" class="texto-enlace" target="_blank" rel="noopener noreferrer">Teoría, Transición del Agujero Negro</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">04</span>
+                        <h3><a href="https://archive.org/details/cover_20250927_1045/Teoria_Transicion_Agujero_Negro/" class="texto-enlace" target="_blank" rel="noopener noreferrer">Teoría, Transición del Agujero Negro</a></h3>
                         <p class="texto-descripcion">Infinito.</p>
                     </li>
-                    <li data-index="05">
-                        <a href="https://archive.org/details/la-desprocesacion-de-la-luz-pensamiento-sobre-la-velocidad-el-vacio-y-el-limite-/La%20desprocesación%20de%20la%20luz_%20pensamiento%20sobre%20la%20velocidad%2C%20el%20vacío%20y%20el%20límite%20del%20fotón%20—%20Por%20Dugriel/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Desprocesación De La Luz Pensamiento Sobre La Velocidad, El Vacío Y El Límite Del Fotón</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">05</span>
+                        <h3><a href="https://archive.org/details/la-desprocesacion-de-la-luz-pensamiento-sobre-la-velocidad-el-vacio-y-el-limite-/La%20desprocesación%20de%20la%20luz_%20pensamiento%20sobre%20la%20velocidad%2C%20el%20vacío%20y%20el%20límite%20del%20fotón%20—%20Por%20Dugriel/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Desprocesación De La Luz Pensamiento Sobre La Velocidad, El Vacío Y El Límite Del Fotón</a></h3>
                         <p class="texto-descripcion">Ensayo filosófico y físico sobre la naturaleza del fotón como proceso. Propone el concepto de "desprocesación" para describir la pérdida de coherencia del campo electromagnético bajo condiciones extremas, como los agujeros negros.</p>
                     </li>
-                    <li data-index="06">
-                        <a href="https://archive.org/details/el-siguiente-paso-de-la-humanidad-el-control-del-cerebro-y-la-evolucion-hacia-la-materia/El%20siguiente%20paso%20de%20la%20humanidad_%20el%20control%20del%20cerebro%20y%20la%20evolución%20hacia%20la%20materia/" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Siguiente Paso De La Humanidad El Control Del Cerebro Y La Evolución Hacia La Materia</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">06</span>
+                        <h3><a href="https://archive.org/details/el-siguiente-paso-de-la-humanidad-el-control-del-cerebro-y-la-evolucion-hacia-la-materia/El%20siguiente%20paso%20de%20la%20humanidad_%20el%20control%20del%20cerebro%20y%20la%20evolución%20hacia%20la%20materia/" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Siguiente Paso De La Humanidad El Control Del Cerebro Y La Evolución Hacia La Materia</a></h3>
                         <p class="texto-descripcion">Ensayo filosófico y científico sobre la evolución humana desde la perspectiva del control del cerebro y la expansión de la conciencia hacia la materia. Explora la transición de la evolución biológica a la material y neurológica, el vínculo entre mente y energía, y el posible futuro donde el pensamiento actúe directamente sobre la materia.</p>
                     </li>
-                    <li data-index="07">
-                        <a href="https://archive.org/details/el-tiempo-como-proceso-una-observacion-sobre-la-existencia" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Tiempo Como Proceso Una Observación Sobre La Existencia</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">07</span>
+                        <h3><a href="https://archive.org/details/el-tiempo-como-proceso-una-observacion-sobre-la-existencia" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Tiempo Como Proceso Una Observación Sobre La Existencia</a></h3>
                         <p class="texto-descripcion">Reflexión filosófica original sobre la naturaleza del tiempo entendida como proceso. El texto propone que el tiempo no es duración ni flujo, sino la condición relacional que emerge cuando algo puede procesar el cambio.</p>
                     </li>
-                    <li data-index="08">
-                        <a href="https://archive.org/details/la-perdida-del-nombre/La%20pérdida%20del%20Nombre/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La pérdida del Nombre: cómo el "Dios" occidental sustituyó al sagrado hebreo y a todos los demás</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">08</span>
+                        <h3><a href="https://archive.org/details/la-perdida-del-nombre/La%20pérdida%20del%20Nombre/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La pérdida del Nombre: cómo el "Dios" occidental sustituyó al sagrado hebreo y a todos los demás</a></h3>
                         <p class="texto-descripcion">Ensayo que analiza cómo el término "Dios" occidental reemplazó los nombres sagrados originales de diferentes culturas, desde YHWH hasta Teōtl y K'uh, explorando la pérdida de significado cultural y la transformación del lenguaje sagrado en dogma universal.</p>
                     </li>
-                    <li data-index="09">
-                        <a href="https://archive.org/details/el-amor-como-aprendizaje-proceso-y-cumplimiento/El%20amor%20como%20aprendizaje%2C%20proceso%20y%20cumplimiento/" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Amor Como Aprendizaje, Proceso y Cumplimiento del Entendimiento</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">09</span>
+                        <h3><a href="https://archive.org/details/el-amor-como-aprendizaje-proceso-y-cumplimiento/El%20amor%20como%20aprendizaje%2C%20proceso%20y%20cumplimiento/" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Amor Como Aprendizaje, Proceso y Cumplimiento del Entendimiento</a></h3>
                         <p class="texto-descripcion">Este texto desarrolla una teoría del amor basada en el aprendizaje, la práctica y el cumplimiento de un proceso estructurado. Se analiza el amor no como emoción instantánea ni como química biológica, sino como un fenómeno cognitivo, ético y temporal que integra pasado, presente y futuro.</p>
                     </li>
-                    <li data-index="10">
-                        <a href="https://archive.org/details/el-espacio-entre-los-polos-campos-gravedad-y-la-estructura-de-la-realidad/El%20Espacio%20entre%20los%20Polos%20Campos%2C%20Gravedad%20y%20la%20Estructura%20de%20la%20Realidad/" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Espacio Entre Los Polos Campos, Gravedad Y La Estructura De La Realidad</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">10</span>
+                        <h3><a href="https://archive.org/details/el-espacio-entre-los-polos-campos-gravedad-y-la-estructura-de-la-realidad/El%20Espacio%20entre%20los%20Polos%20Campos%2C%20Gravedad%20y%20la%20Estructura%20de%20la%20Realidad/" class="texto-enlace" target="_blank" rel="noopener noreferrer">El Espacio Entre Los Polos Campos, Gravedad Y La Estructura De La Realidad</a></h3>
                         <p class="texto-descripcion">Una exploración sobre la naturaleza fundamental de los campos y la gravedad, desde la intuición inicial hasta implicaciones cosmológicas. Propone que lo esencial ocurre en el espacio entre las cosas, no en las cosas mismas.</p>
                     </li>
-                    <li data-index="11">
-                        <a href="https://archive.org/details/cover_20251010" class="texto-enlace" target="_blank" rel="noopener noreferrer">Reflexión sobre la Opinión y el Pensamiento Social Contemporáneo</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">11</span>
+                        <h3><a href="https://archive.org/details/cover_20251010" class="texto-enlace" target="_blank" rel="noopener noreferrer">Reflexión sobre la Opinión y el Pensamiento Social Contemporáneo</a></h3>
                         <p class="texto-descripcion">Pensar.</p>
                     </li>
-                    <li data-index="12">
-                        <a href="https://archive.org/details/de-la-fisica-a-la-libertad-una-explicacion-del-pensamiento/De%20la%20Física%20a%20la%20Libertad_%20Una%20Explicación%20del%20Pensamiento/" class="texto-enlace" target="_blank" rel="noopener noreferrer">De La Física A La Libertad Una Explicación Del Pensamiento</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">12</span>
+                        <h3><a href="https://archive.org/details/de-la-fisica-a-la-libertad-una-explicacion-del-pensamiento/De%20la%20Física%20a%20la%20Libertad_%20Una%20Explicación%20del%20Pensamiento/" class="texto-enlace" target="_blank" rel="noopener noreferrer">De La Física A La Libertad Una Explicación Del Pensamiento</a></h3>
                         <p class="texto-descripcion">¿Y si la verdadera libertad no es lo que crees? Este ensayo conecta la física de partículas con la condición humana, revelando por qué la "independencia" es más peligrosa y profunda que la "libertad". Descubre la diferencia crucial entre estar libre en un campo social y ser verdaderamente independiente, y cómo esta distinción define tu vida real.</p>
                     </li>
-                    <li data-index="13">
-                        <a href="https://archive.org/details/slow-fall-.-sf-manifiesto" class="texto-enlace" target="_blank" rel="noopener noreferrer">Slow Fall (. SF) — Manifiesto</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">13</span>
+                        <h3><a href="https://archive.org/details/slow-fall-.-sf-manifiesto" class="texto-enlace" target="_blank" rel="noopener noreferrer">Slow Fall (. SF) — Manifiesto</a></h3>
                         <p class="texto-descripcion">Manifiesto fundacional del proyecto Slow Fall (.SF), también conocida como "la red de la posibilidad". Una propuesta ética, filosófica y tecnológica que busca reconfigurar la interacción digital, devolviendo la equidad, el azar justo y la autenticidad como pilares de la conexión humana.</p>
                     </li>
-                    <li data-index="14">
-                        <a href="https://archive.org/details/la-universalidad-del-concepto-de-campo" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Universalidad Del Concepto De Campo</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">14</span>
+                        <h3><a href="https://archive.org/details/la-universalidad-del-concepto-de-campo" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Universalidad Del Concepto De Campo</a></h3>
                         <p class="texto-descripcion">Propone el "campo estructurante" como principio universal para entender la realidad. Examina cómo toda existencia —desde lo físico hasta lo cognitivo— emerge en contextos relacionales, contrastando el pensamiento de campos con el enfoque sustancialista.</p>
                     </li>
-                    <li data-index="15">
-                        <a href="https://archive.org/details/teoria-de-la-cosmologia-cuantica-del-campo-primordial-la-conexion-fractal" class="texto-enlace" target="_blank" rel="noopener noreferrer">Teoría De La Cosmología Cuántica Del Campo Primordial La Conexión Fractal</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">15</span>
+                        <h3><a href="https://archive.org/details/teoria-de-la-cosmologia-cuantica-del-campo-primordial-la-conexion-fractal" class="texto-enlace" target="_blank" rel="noopener noreferrer">Teoría De La Cosmología Cuántica Del Campo Primordial La Conexión Fractal</a></h3>
                         <p class="texto-descripcion">Explora una cosmología donde la realidad es un eco fractal: un mismo latido genera galaxias y partículas. Aquí, un agujero negro no es un vacío oscuro, sino la semilla de un nuevo big bang, conectado por la no-localidad de un Campo Primordial.</p>
                     </li>
-                    <li data-index="16">
-                        <a href="https://archive.org/details/la-hipocresia-como-funcion-un-analisis-sobre-la-dinamica-de-la-ocultacion-y-la-revelacion/La%20Hipocresía%20como%20Función_%20Un%20Análisis%20sobre%20la%20Dinámica%20de%20la%20Ocultación%20y%20la%20Revelación/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Hipocresía Como Función Un Análisis Sobre La Dinámica De La Ocultación Y La Revelación</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">16</span>
+                        <h3><a href="https://archive.org/details/la-hipocresia-como-funcion-un-analisis-sobre-la-dinamica-de-la-ocultacion-y-la-revelacion/La%20Hipocresía%20como%20Función_%20Un%20Análisis%20sobre%20la%20Dinámica%20de%20la%20Ocultación%20y%20la%20Revelación/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Hipocresía Como Función Un Análisis Sobre La Dinámica De La Ocultación Y La Revelación</a></h3>
                         <p class="texto-descripcion">Ensayo filosófico y psicológico que analiza la hipocresía no como un mero defecto moral, sino como una función dinámica estructurada en el comportamiento humano. El texto explora el mecanismo de construcción de una imagen pública (máscara) para ocultar aspectos reprimidos, la acumulación de tensión y la eventual ruptura que revela la verdad oculta.</p>
                     </li>
-                    <li data-index="17">
-                        <a href="https://archive.org/details/la-belleza-como-patron-cumplido_202512/La%20Belleza%20como%20Patrón%20Cumplido/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Belleza Como Patrón Cumplido</a>
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">17</span>
+                        <h3><a href="https://archive.org/details/la-belleza-como-patron-cumplido_202512/La%20Belleza%20como%20Patrón%20Cumplido/" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Belleza Como Patrón Cumplido</a></h3>
                         <p class="texto-descripcion">Ensayo filosófico que propone una teoría original de la belleza como "reconocimiento de patrón cumplido". Desarrolla la idea de que la belleza emerge cuando una conciencia —ella misma un patrón singular en devenir— reconoce en un objeto, ser, idea o vínculo la coherencia procesual entre su origen, presente y proyección.</p>
+                    </li>
+                    <!-- NUEVO ENSAYO CLAVE AGREGADO -->
+                    <li>
+                        <span class="indice-numero" aria-hidden="true">18</span>
+                        <h3><a href="https://archive.org/details/la-corrupcion-dialectica-del-feminismo" class="texto-enlace" target="_blank" rel="noopener noreferrer">La Corrupción Dialéctica del Feminismo</a></h3>
+                        <p class="texto-descripcion">Ensayo de crítica sociolingüística que analiza la transformación del feminismo de herramienta analítica en identidad tribal. Aplica la distinción "uso vs. utilización" para diagnosticar la banalización del discurso en redes sociales y propone la postura del "observador comprometido no-adherido".</p>
                     </li>
                 </ul>
             </nav>
@@ -393,7 +379,6 @@
 
         <footer class="enlace-perfil">
             <strong>Perfil completo y todos los textos</strong>
-            <!-- ARREGLO 3: Texto del enlace más claro y descriptivo -->
             <a href="https://archive.org/details/@dugriel" target="_blank" rel="noopener noreferrer">Ver todos los textos en Archive.org</a>
         </footer>
     </div>
