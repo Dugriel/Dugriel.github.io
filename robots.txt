@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://dugriel.github.io/sitemap.html
+Sitemap: https://dugriel.github.io/sitemap.xml
